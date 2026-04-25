@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Agent Plugin",
+  "version": "0.1.0",
+  "description": "Send page snapshots to a server and execute standardized browser commands.",
+  "permissions": ["storage", "tabs", "scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Browser Agent"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

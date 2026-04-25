@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Agent 日志</title>
+  </head>
+  <body>
+    <main class="log-page">
+      <header class="log-header">
+        <div>
+          <p class="eyebrow">Browser Agent</p>
+          <h1>执行命令日志</h1>
+        </div>
+        <div class="toolbar">
+          <button id="refreshButton" type="button" class="secondary">刷新</button>
+          <button id="clearButton" type="button">清空</button>
+        </div>
+      </header>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>接收时间</th>
+              <th>Tab</th>
+              <th>Command ID</th>
+              <th>Action</th>
+              <th>Target</th>
+              <th>Params</th>
+              <th>结果</th>
+            </tr>
+          </thead>
+          <tbody id="logRows"></tbody>
+        </table>
+        <p id="emptyText" class="empty" hidden>暂无执行命令</p>
+      </section>
+    </main>
+    <script type="module" src="/src/command-log/main.ts"></script>
+  </body>
+</html>

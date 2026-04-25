@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Agent</title>
+  </head>
+  <body>
+    <main class="popup">
+      <section class="panel">
+        <p class="eyebrow">Browser Agent</p>
+        <h1>插件控制台</h1>
+        <label class="field">
+          <span>服务器地址</span>
+          <input id="serverUrl" type="url" placeholder="wss://example.com/ws" />
+        </label>
+        <label class="toggle">
+          <input id="enabled" type="checkbox" />
+          <span>启用插件</span>
+        </label>
+        <div class="actions">
+          <button id="testButton" type="button" class="secondary">测试联通</button>
+        </div>
+        <p id="statusText" class="status">状态：未连接</p>
+        <div class="meta">
+          <span id="versionText"></span>
+          <div class="meta-actions">
+            <button id="logButton" type="button" class="link">日志页</button>
+            <button id="docsButton" type="button" class="link">接口文档</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/popup/main.ts"></script>
+  </body>
+</html>
